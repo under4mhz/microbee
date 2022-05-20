@@ -23,3 +23,4 @@ A patched version of cpmtools-2.10 included, since the vanilla cpmtools does not
 
 For more information, see the Microbee Forum at https://microbeetechnology.com.au/forum/
 
+![Screen Shot](microbee.png "Demo Screen Shot")
