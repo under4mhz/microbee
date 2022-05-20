@@ -5,6 +5,8 @@
 // THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 // FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
 // WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+//
+// Feel free to give credit
 
 #include <stdint.h>
 #include <stdbool.h>
@@ -106,6 +108,8 @@ void vdu_init() {
     vdu_crt_setup();
 }
 
+///< Poll if a key is pressed
+///< Keyboard access is via the crt controller
 bool is_key_down(uint8_t key) __naked __z88dk_fastcall {
 
    key;
@@ -258,7 +262,7 @@ void display_test() {
 ///< Methods of producing 1 bit sound
 void sound_test() {
 
-    // Pulse width modulations or PWM. (10% on / 90% off)
+    // Pulse width modulation (PWM) (10% on / 90% off)
     // Using shorter pulses, but at a set wave length,
     // it's possible to have multiple channels, but gives a buzzing quality
     for( int i = 0; i < 200; i++ ) {
@@ -269,7 +273,7 @@ void sound_test() {
         for( int delay = 0; delay < 200; delay++ );
     }
 
-    // Pure. (50% on / 50% off).
+    // Pure (50% on / 50% off).
     // A clear sound, but multiple channels is difficult.
     for( int i = 0; i < 200; i++ ) {
 
