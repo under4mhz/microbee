@@ -1,5 +1,5 @@
 # Microbee
-A simple demo to show how to create games for the Microbee computer. There are no moving parts, but demonstrates the basics for how to access the hardware.
+A simple demo to show how to create games for the Microbee computer. There are no moving parts, but demonstrates how to access the hardware.
 
 Included is
 
