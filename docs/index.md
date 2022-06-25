@@ -31,27 +31,27 @@ Below is a technical summary of the memory and ports.
 
 ## Graphics
 - Graphics modes
- - 64x16 (512x256 pixels)
- - 80x16 (640x256 pixels)
- - No seperate text mode
+    - 64x16 (512x256 pixels)
+    - 80x16 (640x256 pixels)
+    - No seperate text mode
 - Tile based graphics
- -  8x16 pixels each
- - 16 bytes per tile
- - 1 byte per row (8 pixels)
- - 128 fixed tiles (ascii text)
- - 128 user defined tiles (2KB)
- - Tile Table memory mapped at 0xF000 (1K)
- - Pattern (PCG) table memory mapped at 0xF800 (2K)
+    - 8x16 pixels each
+    - 16 bytes per tile
+    - 1 byte per 1 tile row (8 pixels)
+    - 128 fixed tiles (ascii text)
+    - 128 user definable tiles (2KB)
+    - Tile Table memory mapped at 0xF000 (1K)
+    - Pattern (PCG) table memory mapped at 0xF800 (2K)
 - Colours
- - Fixed Palette
- - 16 colours
- - 8 bits per tile
- - 4 bit fg / 4 bit bg
- - Direct to screen
- - Independant of tiles
- - 8x16 pixels each byte
- - Single fg/bg colour per tile
- - Memory mapped and banked at 0xF800
+    - Fixed Palette
+    - 16 colours
+    - 8 bits per tile
+    - 4 bit fg / 4 bit bg
+    - Direct to screen
+    - Independant of tiles
+    - 8x16 pixels each byte
+    - Single fg/bg colour per tile
+    - Memory mapped and banked at 0xF800
 - No hardware sprites
 - Hardware cursor
 - Rockwell R6545 CRT Controller
