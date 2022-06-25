@@ -268,3 +268,5 @@ Sound is a 1 bit speaker on bit 6 of port 0x02. Similar to the ZX Spectrum, the 
 Keys are read via a complicated manipulation of various crt registers (18,19,16,31) and two ports (0x0B and 0x0C) to set which scan row to read and read the scan row byte.
 
 The colour table is banked at the same location as the pattern table (0xF800) since these are both 2KB in size. This can be set by writing 0x40 or 0x00 (bit 6) to port 0x08 to set the colour and pixel tables respectively.
+
+Support me on Patreon: [https://www.patreon.com/Under4Mhz](https://www.patreon.com/Under4Mhz)
