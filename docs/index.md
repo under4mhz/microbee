@@ -159,7 +159,7 @@ uBee512 is considered the standard for emulation for Microbee in the Microbee co
 Unzip and build
 
     unzip ~/Downloads/ubee512-main.zip
-    cd ubee512-main.0/src && make
+    cd ubee512-main/src && make
     ./build/ubee512
 
 This will leave a message about configuring ubee the first time. Run it again, display an error. Copy the appropriate roms from mame:
