@@ -17,6 +17,7 @@ Below is a technical summary of the memory and ports.
 | F800 to FFFF | Pattern/Colour Table (Banked) | 2KB
 
 ## Ports
+
 | Port   | Description | Direction
 |---|---|--
 | 0x02 | Sound 1 bit speaker (bit 6) | write
@@ -63,6 +64,7 @@ Below is a technical summary of the memory and ports.
 - cpmtools (custom patched version of 2.10)
 
 ## Formats
+
 | Extension | Desciption
 |---|---
 | .bee | Standard bin, org 0x900 (for older models with rom until 0x900)
