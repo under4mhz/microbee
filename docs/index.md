@@ -5,8 +5,8 @@ Below is a technical summary of the memory and ports.
 # Technical Summary
 ## Memory Map
 
-|Memory Range|Description|Size
-|---|---|--
+|Memory Range|Description|Size|
+|---|---|---|
 | 0000 to 3FFF | USER RAM (16K Models)| 16KB
 | 4000 to 7FFF | USER RAM (32K Models)| 16KB
 | 8000 to BFFF | Microworld Level II Basic | 16KB
@@ -18,14 +18,15 @@ Below is a technical summary of the memory and ports.
 
 ## Ports
 
-| Port   | Description | Direction
-|---|---|--
+| Port   | Description | Direction |
+|---|---|---|
 | 0x02 | Sound 1 bit speaker (bit 6) | write
 | 0x08 | VDU Bank Pattern/Colour at F800 (bit 6)| write
 |0x0B| Latch ROM (Enable keyboard scan)|write
 | 0x0C | CRT Controller (VDU) Status | read
 | 0x0C | CRT Controller (VDU) Register Set |write
 | 0x0D | CRT Controller (VDU) Data Set|write
+
 - Keyboard is accessed via CRT Controller
 
 ## Graphics
@@ -66,7 +67,7 @@ Below is a technical summary of the memory and ports.
 ## Formats
 
 | Extension | Desciption
-|---|---
+|---|---|
 | .bee | Standard bin, org 0x900 (for older models with rom until 0x900)
 | .com | Standard bin, org 0x100 (cpm 2.2 disk based machines)
 | .dsk | Double sided, 40/80 track, CPC-Emu DSK floppy disk format
