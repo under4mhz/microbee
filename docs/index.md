@@ -271,4 +271,4 @@ The colour table is banked at the same location as the pattern table (0xF800) si
 
 ------
 
-Support me on Patreon: [https://www.patreon.com/Under4Mhz](https://www.patreon.com/Under4Mhz)
+Support me on Patreon: <a href="https://www.patreon.com/Under4Mhz">https://www.patreon.com/Under4Mhz</a>
