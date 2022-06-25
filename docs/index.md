@@ -102,7 +102,7 @@ Earlier colour models used a different colour encoding scheme: 5bits/3bits for f
 
 The colour table is banked at the same location as the PCG table, and needs to be swapped to be able to write to it. This can be set by writing 0x40 or 0x00 (bit 6) to port 0x08 to set the colour and pixel tables respectively.
 
-Early Microbee models ran 2Mhz while the later models ran at 3,5Mhz, so there is a speed difference between the colour and monochome models (the colour being faster).
+Early Microbee models ran 2Mhz while the later models ran at 3.5Mhz, so there is a speed difference between the colour and monochome models (the colour being faster).
 
 ## Emulators
 Three emulators are available for Microbee: Mame, uBee512 and nanowasp.
@@ -110,15 +110,15 @@ Three emulators are available for Microbee: Mame, uBee512 and nanowasp.
 ### Nanowasp
 Nanowasp is an online emulator for the monochrome Microbee 16K
 
-1. Go to http://nanowasp.org/ 
+1. Go to <a href="http://nanowasp.org/">http://nanowasp.org/</a>
 2. Select Type->Upload files
 3. Select a tap file.
-4. Type “load” (single word, by itself) at the prompt.
+4. Type “load” at the prompt. (Single word, by itself, no quotes)
 
 ### Mame
 Mame is the classic retro hardware emulator.
 
-Download microbee_files.zip from https://stickfreaks.com/misc/microbee
+Download microbee_files.zip from <a href="https://stickfreaks.com/misc/microbee">https://stickfreaks.com/misc/microbee</a>
 
     sudo snap install mame
 	cd ~/Downloads/
@@ -184,7 +184,7 @@ The original Microbee systems have BIOS rom up to until address 0x900. So for ta
 
 There's a tool to create Microbee disks called bin2tap (different from the z88dk bin2tap). It's written in C# and works well with mono under Linux
 
-https://github.com/toptensoftware/bin2tap
+<a href="https://github.com/toptensoftware/bin2tap">https://github.com/toptensoftware/bin2tap</a>
 
 To convert a .bee file to a tap for use in an emulator.
 
