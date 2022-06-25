@@ -150,14 +150,15 @@ Below are some useful keys for mame:
 
 
 ### uBee512
-uBee512 is consider the standard for emulation for Microbee in the Microbee community.
+uBee512 is considered the standard for emulation for Microbee in the Microbee community.
 
 Download 
-1. ubee512-6.0.0.tar.gz
-2. 128k_premium_master_ds40.zip
+1. Download ubee512-main.zip from <a href="https://github.com/under4mhz/ubee512">https://github.com/under4mhz/ubee512</a>
+2. Download 128k_premium_master_ds40.zip from the Microbee Forum respository
 
-    tar xvfz ~/Downloads/ubee512-6.0.0.tar.gz
-    cd ubee512-6.0.0/src && make
+    unzip ~/Downloads/128k_premium_master_ds40.zip
+    unzip ~/Downloads/ubee512-main.zip
+    cd ubee512-main.0/src && make
     ./build/ubee512
 
 This will leave a message about configuring ubee the first time. Run it again, display an error. Copy the appropriate roms from mame:
@@ -171,7 +172,7 @@ This will leave a message about configuring ubee the first time. Run it again, d
     ./build/ubee512 --model=p128k -a ~/Downloads/128k_premium_master_ds40/128k_premium_master_ds40.dsk
 
 
-uBee512 has a whole bunch of other functions such creating disks and debugging the CPU. In the uBee window right click to bring up the menu. Selecting Console will bring up a window that allows commands from the command line (listed in --help) into the emulator while running. This allows the entry of debugger comands. The commands must still have the preceding double dash as per the command line.
+uBee512 has a large list of other functions such creating disks and debugging the CPU. In the uBee window right click to bring up the menu. Selecting Console will bring up a window that allows commands from the command line (listed in --help) into the emulator while running. This allows the entry of debugger comands. The commands must still have the preceding double dash as per the command line.
 
 
     ./build/ubee512 --help
