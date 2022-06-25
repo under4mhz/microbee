@@ -79,7 +79,7 @@ The vdu is memory mapped and tile based. A set of characters are defined in the 
 
 Address range F000 - F3FF is the Tile Name Table. This defines which characters are displayed on screen. This is laid out as 64x16 characters, left to right, top to bottom, making a total of 1K of ram.
 
-Address range F800 - FFFF is the Tile Pattern Table (or the PCG, the programmable character graphics). This defines 128 possible characters to be displayed on the screen. 
+Address range F800 - FFFF is the Tile Pattern Table (or the PCG, the programmable character graphics). This defines 128 possible characters to be displayed on the screen.
 
 Address range F800 - FFFF also defines Screen Colour Table. This is banked and directly defines the colours for each cell of the entire 64x16 screen. That is, there can be different colours for the same tile in different locations. This was done so that the same font can be used, but have differently colours on the screen.
 
@@ -121,9 +121,9 @@ Mame is the classic retro hardware emulator.
 Download microbee_files.zip from <a href="https://stickfreaks.com/misc/microbee">https://stickfreaks.com/misc/microbee</a>
 
     sudo snap install mame
-	cd ~/Downloads/
-	unzip microbee_files.zip
-	cd /usr/share/games/mame && unzip ~/Downloads/roms/mbee.zip
+    cd ~/Downloads/
+    unzip microbee_files.zip
+    cd /usr/share/games/mame && unzip ~/Downloads/roms/mbee.zip
     mame mbee128 -floppydisk1 "~/Downloads/disks/Adventure Games 1 (19xx)(-)[ds84].dsk"
 
 If you have a cp/m 2.2 com file, you can also use:
@@ -132,7 +132,7 @@ If you have a cp/m 2.2 com file, you can also use:
 
 I typically run mame with the longer command line options below. This removes the info screen, puts it into a window, and scales the window be square.
 
-	mame mbee128  -volume -10 -window  -nounevenstretch -nofilter -nomaximize -skip_gameinfo -resolution 512x512 -intscalex 1 -intscaley 2
+    mame mbee128  -volume -10 -window  -nounevenstretch -nofilter -nomaximize -skip_gameinfo -resolution 512x512 -intscalex 1 -intscaley 2
 
 An issue with the mame emulation of Microbee is that it displays light grey as white. So the colours are slightly incorrect.
 
@@ -150,13 +150,14 @@ Below are some useful keys for mame:
 
 
 ### uBee512
+
 uBee512 is considered the standard for emulation for Microbee in the Microbee community.
 
-Download 
 1. Download ubee512-main.zip from <a href="https://github.com/under4mhz/ubee512">https://github.com/under4mhz/ubee512</a>
 2. Download 128k_premium_master_ds40.zip from the Microbee Forum respository
 
-    unzip ~/Downloads/128k_premium_master_ds40.zip
+Unzip and build
+
     unzip ~/Downloads/ubee512-main.zip
     cd ubee512-main.0/src && make
     ./build/ubee512
@@ -164,16 +165,14 @@ Download
 This will leave a message about configuring ubee the first time. Run it again, display an error. Copy the appropriate roms from mame:
 
     cp /usr/share/games/mame/roms/mbee128p/bn56.rom  ~/.ubee512/roms/P128K.ROM
-	cp /usr/share/games/mame/roms/mbee128p/bn56.rom  ~/.ubee512/roms/P512K.ROM
-	cp /usr/share/games/mame/roms/mbeepc85/bas525a.rom ~/.ubee512/roms/PC85_BASIC_A.ROM
-	cp /usr/share/games/mame/roms/mbeepc85/bas525b.rom ~/.ubee512/roms/PC85_BASIC_B.ROM
-	
+    cp /usr/share/games/mame/roms/mbee128p/bn56.rom  ~/.ubee512/roms/P512K.ROM
+    cp /usr/share/games/mame/roms/mbeepc85/bas525a.rom ~/.ubee512/roms/PC85_BASIC_A.ROM
+    cp /usr/share/games/mame/roms/mbeepc85/bas525b.rom ~/.ubee512/roms/PC85_BASIC_B.ROM
     cp /usr/share/games/mame/roms/mbee128p/charrom.bin ~/.ubee512/roms/
+    unzip ~/Downloads/128k_premium_master_ds40.zip
     ./build/ubee512 --model=p128k -a ~/Downloads/128k_premium_master_ds40/128k_premium_master_ds40.dsk
 
-
 uBee512 has a large list of other functions such creating disks and debugging the CPU. In the uBee window right click to bring up the menu. Selecting Console will bring up a window that allows commands from the command line (listed in --help) into the emulator while running. This allows the entry of debugger comands. The commands must still have the preceding double dash as per the command line.
-
 
     ./build/ubee512 --help
 
@@ -190,8 +189,8 @@ There's a tool to create Microbee disks called bin2tap (different from the z88dk
 To convert a .bee file to a tap for use in an emulator.
 
     mono bin2tap.exe game.bee game.tap --loadaddr:0x900 --startaddr:0x900
-	ubee512 --model=pc85 --conio --tapfilei=game.tap
-	load
+    ubee512 --model=pc85 --conio --tapfilei=game.tap
+    load
 
 Simply type "load" at the uBee prompt in the emulator, and the game will load and run.
 
@@ -209,9 +208,9 @@ The applicaiton use to manipulate cpm disks is cpmtools. However vanilla cpmtool
 To build cpmtools from source:
 
     sudo apt install libdsk4-dev libncurses5-dev -y
-	./configure --with-libdsk
-	make
-	./cpmls -f ds80 -T dsk "~/Downloads/disk/ChickenMan\'s\ Games\ Demo\ Disc\ \(19xx\)\(ChickenMan\)\[ds80\].dsk"
+    ./configure --with-libdsk
+    make
+    ./cpmls -f ds80 -T dsk "~/Downloads/disk/ChickenMan\'s\ Games\ Demo\ Disc\ \(19xx\)\(ChickenMan\)\[ds80\].dsk"
     ./cpmls -f ds40 -T dsk "~/Downloads/128k_premium_master_ds40/128k_premium_master_ds40.dsk"
 
 libDSK creates the dsk format needed by mame and uBee512 to load disks images.
@@ -224,9 +223,9 @@ To create a boot disk to use for applications, take ChickenMan's demo disk and r
 
     cp "~/Downloads/disk/ChickenMan's Games Demo Disc (19xx)(ChickenMan)[ds80].dsk" template.dsk
     mame mbee256 -floppydisk1  "~/Downloads/256tc_system_disk_rel5_89_07_ds80/256tc_system_disk_rel5_89_07_ds80.dsk" -floppydisk2 "template.dsk"
-	b:
-	8
-	enter
+    b:
+    8
+    enter
 
 Keep ccp.sys, delete all the other files.
 
@@ -246,9 +245,9 @@ To compile a test program:
     sdcc -I. -mz80 --data-loc 0x7800 --code-loc 0x0180 --no-std-crt0 crt0_bee.rel -o game.rel -c game.c
     sdcc -I. -mz80 --data-loc 0x7800 --code-loc 0x0180 --no-std-crt0 crt0_bee.rel game.rel -o game.ihx
     objcopy --input-target=ihex --output-target=binary game.ihx game.com
-	cp template.dsk game.dsk
+    cp template.dsk game.dsk
     cpmcp -f ds80 -T dsk game.dsk game.com 0:m.com
-	mame mbee128p -floppydisk1 game.dsk
+    mame mbee128p -floppydisk1 game.dsk
 
 Mame will boot the disk and run the demo.
 
