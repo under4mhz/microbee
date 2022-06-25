@@ -21,11 +21,9 @@ The build environment has been tested on Linux only. The same code should work o
 
 A patched version of cpmtools-2.10 included, since the vanilla cpmtools does not support all the possible Microbee disk formats.
 
+For more a more detailed description, see https://under4mhz.github.io/microbee/
 For more information, see the Microbee Forum at https://microbeetechnology.com.au/forum/
+Support me on Patreon: https://www.patreon.com/Under4Mhz
 
 ![Screen Shot](microbee.png "Demo Screen Shot")
-
-For more a more detailed description, see https://under4mhz.github.io/microbee/
-
-Support me on Patreon: https://www.patreon.com/Under4Mhz
 
