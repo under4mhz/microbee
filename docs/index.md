@@ -18,14 +18,14 @@ Below is a technical summary of the memory and ports.
 
 ## Ports
 
-| Port   | Description | Direction |
+| Port | Description | Direction |
 |---|---|---|
 | 0x02 | Sound 1 bit speaker (bit 6) | write
-| 0x08 | VDU Bank Pattern/Colour at F800 (bit 6)| write
-|0x0B| Latch ROM (Enable keyboard scan)|write
+| 0x08 | VDU Bank Pattern/Colour at F800 (bit 6) | write
+| 0x0B | Latch ROM (Enable keyboard scan) | write
 | 0x0C | CRT Controller (VDU) Status | read
-| 0x0C | CRT Controller (VDU) Register Set |write
-| 0x0D | CRT Controller (VDU) Data Set|write
+| 0x0C | CRT Controller (VDU) Register Set | write
+| 0x0D | CRT Controller (VDU) Data Set | write
 
 - Keyboard is accessed via CRT Controller
 
@@ -66,7 +66,7 @@ Below is a technical summary of the memory and ports.
 
 ## Formats
 
-| Extension | Desciption
+| Extension | Desciption |
 |---|---|
 | .bee | Standard bin, org 0x900 (for older models with rom until 0x900)
 | .com | Standard bin, org 0x100 (cpm 2.2 disk based machines)
