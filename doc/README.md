@@ -6,7 +6,7 @@ Below is a technical summary of the memory and ports.
 ## Memory Map
 
 |Memory Range|Description|Size
-|---|---|
+|---|---|--
 | 0000 to 3FFF | USER RAM (16K Models)| 16KB
 | 4000 to 7FFF | USER RAM (32K Models)| 16KB
 | 8000 to BFFF | Microworld Level II Basic | 16KB
