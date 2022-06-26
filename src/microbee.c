@@ -15,9 +15,9 @@
 #define VDU_VSYNC_MASK ( 1 << crtStatusVSync )
 #define SOUND_MASK 0x60
 
-#define TILE_TABLE_ADDRESS 0xF000
-#define PIXEL_TABLE_ADDRESS 0xF800
-#define COLOUR_TABLE_ADDRESS 0xF800
+#define TILE_TABLE_ADDRESS ((uint8_t*)0xF000)
+#define PIXEL_TABLE_ADDRESS ((uint8_t*)0xF800)
+#define COLOUR_TABLE_ADDRESS ((uint8_t*)0xF800)
 
 // From the R6545 crt display controller manual
 
@@ -296,7 +296,7 @@ void keyboard_test() {
 
     // Punctuation tests as lower case
 
-    for( int key = 'A'; key < 'z'; key++ ) {
+    for( int key = 32; key < 256; key++ ) {
         
         if ( is_key_down( key ) ) {
 
